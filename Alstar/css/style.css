@@ -186,6 +186,8 @@ nav.navbar.fixed-to-top{
 	/*text-transform: uppercase;*/
 	font-weight: 700;
 	font-size: 2em;
+	
+  	
 }
 
 /* ================================
@@ -367,6 +369,22 @@ Team
 .box-team img {
 	margin-bottom: 30px;
 }
+
+.grid-item {
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+  }
+  /*.Mechanical-Team {
+    background: teal;
+  }
+  .Electrical-Team {
+	background: salmon;
+  }
+  .Business-Team {
+    background: tomato;
+  }*/
 
 
 

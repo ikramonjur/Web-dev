@@ -34,7 +34,9 @@
         </button>
 
         <!-- Logo text or image -->
-        <a class="navbar-brand" href="index.html">Aerial Robotics</a>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/CUARClogo.png" alt="" style= "max-width: 160px; margin-top: -25px; max-height: 70px" /> </a>
+        
 
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
@@ -286,7 +288,7 @@
   <!-- Team -->
   <section id="team" class="home-section bg-white">
     <div class="container">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
             <h2>Our Team</h2>
@@ -318,14 +320,63 @@
             <p>Illustrator</p>
           </div>
         </div>
-       <!-- <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
+       <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" data-wow-delay="0.7s">
           <div class="box-team wow bounceInUp">
             <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
             <h4>Mira Ladovic</h4>
             <p>Typographer</p>
-          </div>-->
+          </div>
+          </div>
         </div>
-      </div>
+      </div>-->
+      <div class="filter">
+          <h2>Our Team</h2>
+          <button data-name='*' class="btn btn-info active">All</button>
+          <button data-name=".Mechanical-Team" class="btn btn-primary">Mechanical Team</button>
+          <button data-name=".Electrical-Team" class="btn btn-danger">Electrical Team</button>
+          <button data-name=".Business-Team" class="btn btn-success">Business Team</button>
+        </div>
+    <div class = "grid">
+        <div class="grid-item Mechanical-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
+        <div class="grid-item Mechanical-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
+        <div class="grid-item Mechanical-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
+        <div class="grid-item Electrical-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
+        <div class="grid-item Electrical-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+            <h4>Mira Ladovic</h4>
+            <p>Typographer</p></div></div>
+        <div class="grid-item Electrical-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
+        <div class="grid-item Business-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
+        <div class="grid-item Business-Team">
+          <div class="box-team wow bounceInUp">
+            <img src="img/team/4.jpg" alt="" class="img-circle img-responsive" />
+          <h4>Mira Ladovic</h4>
+          <p>Typographer</p></div></div>
     </div>
   </section>
 
@@ -489,11 +540,39 @@
   <script src="js/modernizr.custom.js"></script>
   <script src="js/grid.js"></script>
   <script src="js/stellar.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
   <!-- Contact Form JavaScript File -->
   <script src="contactform/contactform.js"></script>
 
   <!-- Template Custom Javascript File -->
   <script src="js/custom.js"></script>
+  <script>
+      var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+          name: function (element) {
+            return $(element).text();
+          }
+        }
+      });
+      $('.filter button').on("click", function () {
+        var value = $(this).attr('data-name');
+          $grid.isotope({
+            filter: value
+          });
+        $('.filter button').removeClass('active');
+        $(this).addClass('active');
+      })
+      $('.sort button').on("click", function () {
+        var value = $(this).attr('data-name');
+        $grid.isotope({
+          sortBy: value
+        });
+        $('.sort button').removeClass('active');
+        $(this).addClass('active');
+      })
+    </script>
 
 </body>
 </html>
