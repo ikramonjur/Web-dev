@@ -377,15 +377,15 @@ Team
 	display: inline;
   }
   /*.Mechanical-Team {
-    background: teal;
+    background:gray;
   }
   .Electrical-Team {
-	background: salmon;
+	background: gray;
   }
   .Business-Team {
-    background: tomato;
-  }*/
-  /*.container {
+    background: gray;
+  }
+  .container {
 	  position: relative;
 	  width: 80%;
   }*/
