@@ -392,8 +392,8 @@ Team
   .img-circle.img-responsive {
 	opacity: 1;
 	display: block;
-	width: 100%;
-	height: auto;
+	width: 20em;
+	height: 15em;
 	transition: .5s ease;
 	backface-visibility: hidden;
   }
